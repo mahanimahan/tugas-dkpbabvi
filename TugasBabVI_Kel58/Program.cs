@@ -12,26 +12,29 @@ namespace TugasBabVI_Kel58
         {
             Main(null);
         }
-        public static void mainprog()
+        public void mainprog()
         {
             Process proses = new Process();
             Console.Clear();
             Console.WriteLine("-----------------------------------");
             Console.WriteLine("Selamat Datang di Toko Baju SUPREME!!");
             Console.WriteLine("Cepat Belanja Terus Keluar!");
-            Console.WriteLine("Hari ini spesial: 1 customer 1 item");
-            Console.WriteLine("Ga boleh beli lebih dari 1 item");
+            Console.WriteLine("Hari ini spesial: 1 customer 1 tipe item");
+            Console.WriteLine("Ga boleh beli lebih dari 1 tipe item");
             Console.WriteLine("-----------------------------------");
             Console.WriteLine("    ");
             Console.WriteLine("    ");
             Console.WriteLine("Silakan pilih: ");
             Console.WriteLine("\nBlouse \tBatik");
             Console.WriteLine("\nKaos   \tJas\n");
+            Console.WriteLine("Pilih dengan nama, ex: blouse");
+            Console.Write("\nPilihan: ");
             proses.Hargabaju(Console.ReadLine());
 
         }
         static void Main(string[] args)
         {
+            Program main = new Program();
             IO io = new IO();
             string response = "";
             do {
@@ -50,7 +53,7 @@ namespace TugasBabVI_Kel58
                 switch (response)
                 {
                     case "1":
-                        mainprog();
+                        main.mainprog();
                         break;
                     case "q":
                         io.exit();
